@@ -1,4 +1,4 @@
-package fr.miage.m2;
+package fr.miage.khaloudinho;
 
 public class HelloWorld {
 

@@ -6,4 +6,4 @@ target
 .idea/
 target/
 filestore-ear/target/
-filestore.iml
+*.iml
