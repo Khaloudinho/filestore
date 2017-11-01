@@ -1,8 +1,6 @@
 package org.filestore.ejb.file.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
@@ -10,6 +8,12 @@ import java.util.List;
 import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
+@NamedQueries(
+		@NamedQuery(
+				name = "listAllFiles",
+				query = "SELECT f FROM FileItem f "
+		)
+)
 public class FileItem implements Serializable {
 
 	@Id

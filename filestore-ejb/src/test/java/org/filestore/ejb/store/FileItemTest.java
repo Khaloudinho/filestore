@@ -12,9 +12,10 @@ import java.sql.DriverManager;
 import java.sql.SQLNonTransientConnectionException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class FileItemTest {
 
@@ -85,7 +86,7 @@ public class FileItemTest {
 
             assertEquals("Tagada", file2.getName());
             file2.setName("A new Name");
-            List<String> receivers = new ArrayList<String>();
+            List<String> receivers = new ArrayList<>();
             receivers.add("user1@test.com");
             receivers.add("user2@test.com");
             file2.setReceivers(receivers);
@@ -103,7 +104,7 @@ public class FileItemTest {
             file4.setMessage("this is another message");
             file4.setOwner("miage");
             file4.setType("text/plain");
-            List<String> receivers4 = new ArrayList<String>();
+            List<String> receivers4 = new ArrayList<>();
             receivers4.add("user2@test.com");
             receivers4.add("user3@test.com");
             file4.setReceivers(receivers4);
@@ -125,8 +126,5 @@ public class FileItemTest {
             LOGGER.log(Level.SEVERE, "error during testing file item", e);
             fail("Exception during testPersistence");
         }
-    }
-
-    private void assertEquals(FileItem file, FileItem file2) {
     }
 }

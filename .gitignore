@@ -4,6 +4,8 @@ target
 .project
 .settings
 .idea/
-target/
+*/target/
 filestore-ear/target/
 *.iml
+filestore-ejb/derby.log
+filestore.iml

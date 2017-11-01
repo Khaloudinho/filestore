@@ -1,15 +1,15 @@
 package org.filestore.ejb.file;
 
-import java.util.List;
-
 import org.filestore.ejb.file.entity.FileItem;
+
+import java.util.List;
 
 public interface FileService {
 	
-	public String postFile(String owner, List<String> receivers, String message, String name, String stream) throws FileServiceException;
+	String postFile(String owner, List<String> receivers, String message, String name, String stream) throws FileServiceException;
 	
-	public FileItem getFile(String id) throws FileServiceException;
+	FileItem getFile(String id) throws FileServiceException;
 	
-	public void deleteFile(String id) throws FileServiceException;
+	void deleteFile(String id) throws FileServiceException;
 
 }
