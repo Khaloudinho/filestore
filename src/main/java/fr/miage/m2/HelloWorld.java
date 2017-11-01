@@ -1,4 +1,4 @@
-package fr.miage.filestore;
+package fr.miage.m2;
 
 public class HelloWorld {
 
