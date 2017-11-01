@@ -8,12 +8,12 @@ import java.util.List;
 import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
-@NamedQueries(
+@NamedQueries({
 		@NamedQuery(
 				name = "listAllFiles",
 				query = "SELECT f FROM FileItem f "
 		)
-)
+})
 public class FileItem implements Serializable {
 
 	@Id

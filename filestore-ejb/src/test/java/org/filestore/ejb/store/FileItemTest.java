@@ -29,7 +29,7 @@ public class FileItemTest {
         try {
             LOGGER.log(Level.INFO, "Starting memory database for unit tests");
             Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
-            DriverManager.getConnection("jdbc:derby:memory:unit-testing-jpa;create=true").close();
+            DriverManager.getConnection("jdbc:derby:memory:unit-testing-jpa").close();
         } catch (Exception e) {
             LOGGER.log(Level.SEVERE, "unable to start database", e);
             fail("Exception during database startup.");
@@ -55,7 +55,7 @@ public class FileItemTest {
         }
         LOGGER.log(Level.INFO, "Stopping memory database.");
         try {
-            DriverManager.getConnection("jdbc:derby:memory:unit-testing-jpa;shutdown=true").close();
+            DriverManager.getConnection("jdbc:derby:memory:unit-testing-jpa").close();
         } catch (SQLNonTransientConnectionException ex) {
             if (ex.getErrorCode() != 45000) {
                 throw ex;
