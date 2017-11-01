@@ -1,10 +1,19 @@
 package org.filestore.ejb.file.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-public class FileItem {
+import static javax.persistence.GenerationType.IDENTITY;
 
+@Entity
+public class FileItem implements Serializable {
+
+	@Id
+	@GeneratedValue(strategy = IDENTITY)
 	private String id;
 	private String name;
 	private String type;

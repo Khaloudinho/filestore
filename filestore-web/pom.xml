@@ -19,7 +19,7 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>fr.miage.jayblanc</groupId>
+			<groupId>fr.miage.khaloudinho</groupId>
 			<artifactId>filestore-ejb</artifactId>
 			<type>ejb</type>
 			<scope>provided</scope>

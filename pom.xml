@@ -108,6 +108,11 @@
 				<version>${version.junit}</version>
 				<scope>test</scope>
 			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-entitymanager</artifactId>
+				<version>5.2.11.Final</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 	
